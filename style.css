@@ -21,7 +21,7 @@
     background-color: red;
 }
 .filter__link:hover {
-    background-color: green;
+    background-color: blue;
 }
 .filter__item:not(:first-child) {
     margin-left: 1px;
