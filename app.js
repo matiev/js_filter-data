@@ -12,7 +12,7 @@ filterLinks.forEach(item => {
             item.classList.add('active');
 
             let iLinkData = item.getAttribute('data-link');
-            let season = content.querySelectorAll(`[data-s="${iLinkData}"]`);
+            // let season = content.querySelectorAll(`[data-s="${iLinkData}"]`);
 
             content.innerHTML = '';
 
