@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: brown;
-    background: #000;
 }
 .filter {
     background-color: lightblue;
