@@ -1,7 +1,4 @@
 
-.filter {
-    background-color: lightblue;
-}
 .filter__list {
     display: flex;
     /* flex-wrap: wrap; */
