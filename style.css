@@ -1,4 +1,6 @@
-
+* {
+    margin: 0;
+}
 .filter {
     background-color: lightblue;
 }
