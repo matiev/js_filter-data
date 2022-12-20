@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 .filter {
     background-color: lightblue;
@@ -35,4 +34,9 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+}
+.content__item {
+    width: 60px;
+    height: 40px;
+    border: 1px solid blue;
 }
