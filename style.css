@@ -36,8 +36,3 @@
     justify-content: center;
     gap: 10px;
 }
-.content__item {
-    width: 60px;
-    height: 40px;
-    border: 1px solid blue;
-}
