@@ -1,28 +1,28 @@
-let filterLinks = document.querySelectorAll('.filter__link'),
-    contentItems = document.querySelectorAll('.content__item'),
-    content = document.querySelector('.content');
-    const items = [...content.children];
+let menuLinks = document.querySelectorAll('.menu__link'),
+    mainItems = document.querySelectorAll('.main__item'),
+    mainInner = document.querySelector('.main__inner'),
+    cloneMainItems = [...mainInner.children];
 
-filterLinks.forEach(item => {
-    content.innerHTML = '';    
-    item.addEventListener('click', event => {    
-        event.preventDefault();
-        filterLinks.forEach(item => item.classList.remove('active'));
-        if (!item.closest('.active')) {
-            item.classList.add('active');
+menuLinks.forEach((ml, v) => {
+  ml.setAttribute('href', `#t${v+1}`)
+  ml.setAttribute('data-l', `t${v+1}`)
 
-            let iLinkData = item.getAttribute('data-link');
-            // let season = content.querySelectorAll(`[data-s="${iLinkData}"]`);
+  ml.addEventListener('click', event => {
+    // event.preventDefault();
+    
+    mainItems.forEach(item => item.remove(item));
 
-            content.innerHTML = '';
-
-            items.forEach(item => {
-                if (item.getAttribute('data-s') === iLinkData) {
-                    content.append(item)
-                }
-            })
+    menuLinks.forEach(item => item.classList.remove('menu__active'));
+    if (!ml.closest('.menu__active')) {
+      ml.classList.add('menu__active');
+      
+      cloneMainItems.forEach(item => {
+        let dh = item.getAttribute('data-h');
+        if (ml.getAttribute('data-l') == dh) {
+          mainInner.append(item)
         }
-    });
+      })
+    }
+  });
 });
-
-filterLinks[0].click();
+menuLinks[0].click();
